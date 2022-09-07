@@ -1,0 +1,128 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #040404;
+    background-image: url(/assets/img/conny-schneider-D7PI-grey-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* estilos de iconos sociales*/
+
+.icon-style {
+    margin-right: 5px;
+    border-radius: 50%;
+}
+svg:hover {
+    fill: #ffc107;
+}
+
+
+/*.login-button {
+    margin-left: 1rem;
+}
+
+.form-control-plaintext {
+    margin-left: 1em;
+}
+
+.form-control {
+    margin-left: 1em;
+}
+
+.navbar-toggler-icon {
+    color:white;
+}
+
+/*#imagen {
+    position: absolute;
+    left: 10%;
+    top: 100%;
+}
+@media (max-width: 600px){
+    .perfil-img {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+    }
+} */
+
+@media (max-width: 375px) {
+    #imagen {
+        max-width: 15%;
+        position: absolute;
+        left: 20%;
+        border: 1px solid #f4f4f4
+    }
+}
+    /* 4 columnas para grandes dispositivos*/
+@media (max-width: 420px) {
+        #imagen  {
+            max-width: 30%;
+            position: absolute;
+            left: 20%;
+    }
+}
+
+@media (max-width: 540px) {
+    #imagen  {
+        max-width: 25%;
+        position: absolute;
+        left:13%
+    }
+}
+
+@media (max-width: 768px) {
+    #imagen  {
+        max-width: 40%;
+        position: absolute;
+        left: 15%;
+    }
+}
+
+@media (max-width: 375px) {
+    #nombre {
+        font-size: large;
+    }
+
+    #perfil {
+        font-size: small;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 415px) {
+    #nombre {
+        font-size: large;
+    }
+
+    #perfil {
+        font-size: small;
+        margin-bottom: 0;
+    }
+}
+
+
+/*-----navbar----*/
+.nav-hov a {
+    position: relative;
+}
+
+.nav-hov a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20;
+    width: 80%;
+    height: 1px;
+    background: #ffc107;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-hov a:hover::before {
+    transform: scaleX(1);
+}

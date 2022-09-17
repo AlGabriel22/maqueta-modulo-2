@@ -35,7 +35,7 @@
                 <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
                     <ul class="nav-hov navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#acerca de">Acerca de</a>
+                            <a class="nav-link active text-white" aria-current="page" href="#acercaDe">Acerca de</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#experiencia">Experiencia</a>
@@ -85,31 +85,32 @@
                     </div>
                     <!---Login section -->
 
-                    <button type="button" class="btn btn-outline-light ms-3 my-3" data-bs-toggle="modal"
+                    <button type="button" class="btn btn-outline-light rounded-pill ms-3 my-3" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">Login</button>
                 </div>
             </div>
         </nav>
 
-        <!-- Modal -->
+        <!-- Modal Login-->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content bg-dark">
                     <div class="modal-header">
                         <h5 class="modal-title text-light" id="staticBackdropLabel">Login</h5>
-                        <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    <!-- formulario -->
+                        <!-- formulario -->
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label text-light">Email</label>
+                            <label for="staticEmail" class="col-sm-2 col-form-label text-light">Usuario</label>
                             <div class="col-sm-10">
-                                <input type="text" readonly class="form-control-plaintext text-light" id="staticEmail"
-                                    value="email@example.com">
+                                <input class="form-control" type="text" placeholder="@usuario"
+                                    aria-label="default input example">
                             </div>
                         </div>
-                        <div class="mb-3 row">
+                        <div class="mb-2 row">
                             <label for="inputPassword" class="col-sm-2 col-form-label text-light">Password</label>
                             <div class="col-sm-10">
                                 <input type="password" class="form-control" id="inputPassword">
@@ -118,8 +119,8 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-warning">Understood</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-warning fw-semibold">Aceptar</button>
                     </div>
                 </div>
             </div>
@@ -133,65 +134,81 @@
                     alt="banner by mohammad-rahmani">
                 <div class="perfil-img text-center col-sm-2">
                     <img src="assets/img/imgprfl-200x200.jpg" id="imagen"
-                        class="rounded-circle border border-5 border-white position-absolute top-75 start-25 translate-middle img-fluid"
+                        class="rounded-circle border border-5 border-white position-absolute translate-middle img-fluid"
                         alt="Alvaro.Gabriel">
                 </div>
             </div>
         </div>
-        <div class="container-expand d-flex bg-dark shadow">
+        <div class="container-fluid d-flex bg-dark bg-gradient shadow">
             <div class="row d-flex justify-content-center ps-5 ms-5">
                 <div class="d-flex col-6 col-sm-12 justify-content-center text-light ms-1 mb-0 pb-0 pt-2 fs-4">
-                    <h1 class="mb-0 d-flex justify-content-center" id="nombre">Alvaro Gabriel Mamani</h1>
+                    <h1 class="mb-0 d-flex justify-content-center fw-semibold fs-3" id="nombre">Alvaro Gabriel Mamani
+                    </h1>
                 </div>
                 <div class="d-flex justify-content-center text-warning mt-0 pb-2 pt-0 fs-5">
-                    <p id="perfil">/>Full Stack Developer Jr.</p>
+                    <p id="perfil"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-code-slash mt-0 pt-0 mx-0" viewBox="0 0 20 20">
+                            <path
+                                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                        </svg>Full Stack Developer Jr.</p>
                 </div>
             </div>
         </div>
-        <!--<div class="d-flex h-100 bg-dark">
-            <div class="text-content d-inline-flex">
-                <h1 id="text" class="display-5 flex-row mb-3">Alvaro.Gabriel.Mamani</h1>
-                <h3 id="text2" class="fst-normal">/>Full.Stack.Developer Jr.</h3>
-            </div>
-        </div> -->
-
-
-        <!--<div class="d-flex flex-column mb-2 bg-dark">
-            <div class="pt-2 fs-3 fw-normal text-center text-light">Alvaro Gabriel Mamani</div>
-            <div class="pb-2 fs-5 text-center text-warning">/>Full.Stack.Developer.Jr.</div>
-        </div>-->
     </header>
 
     <!---seccion acerca de mi-->
-    <section id="acerca de" class="about mt-5">
-        <div class="container text-white py-3 mask shadow rounded-2" style="background-color: rgba(0, 0, 0, 0.6)">
-            <div class="titulo pt-4 ps-3 pb-4">
-                <h2 class="fw-bold text-warning py-3 border-bottom">Acerca de mi</h2>
+    <section id="acercaDe" class="about mt-5">
+        <div class="container text-white py-4 mask shadow rounded-2 bg-gradient"
+            style="background-color: rgba(0, 0, 0, 0.8)">
+            <div class="titulo pt-3 ps-3 pb-4">
+                <h2 class="fw-bold text-warning border-bottom">Acerca de mi</h2>
                 <p class="p-4 text-center fs-5">Estudiante de programación, desarrollador web fullstack</p>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-6">
                     <ul class="list-unstyled ps-5">
-                        <li class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
-                            </svg><strong class="text-warning">Nacimiento:</strong> 18 de mayo de 1989</li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
-                                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg><strong class="text-warning">Nacimiento:</strong> 18 de mayo de 1989</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
                             </svg><strong class="text-warning">Edad:</strong> 33 años</li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
-                                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
                             </svg><strong class="text-warning">Ciudad:</strong> San Miguel de Tucumán, Tucumán</li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                             class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
-                                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
                             </svg><strong class="text-warning">País:</strong> Argentina</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="list-unstyled ps-5">
+                        <li>
+                            <p>Otras actividades:</p>
+                        </li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                            d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                            </svg>Peluqueria</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                            d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                            </svg>Carpinteria</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                            d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                            </svg>DJ</li>
                     </ul>
                 </div>
             </div>
@@ -199,38 +216,47 @@
     </section>
     <!--- seccion experiencia-->
     <section id="experiencia" class="experiencia">
-        <div class="container text-white mask py-3 my-5 shadow rounded-2" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="container text-white mask py-3 my-5 shadow rounded-2 bg-gradient"
+            style="background-color: rgba(0, 0, 0, 0.7)">
             <div class="titulo pt-3 ps-3 pb-4 text-warning">
                 <h2 class="fw-bold border-bottom">Experiencia</h2>
             </div>
             <div class="row align-items-start justify-content-start py-3">
+                <div class="col-2"><img src="/assets/img/imagen_color.png"
+                        class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
                 <div class="col-4">
                     <h4 class="px-2 pt-4 fs-5">Lorem ipsum dolor sit</h4>
                     <p class="text-warning text-center fw-bold">2009-2012</p>
                 </div>
-                <div class="col-8">
+                <div class="col-6">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt quis veniam optio obcaecati?
                         Autem, esse consequatur perferendis iste fugiat reiciendis quo natus quidem, vel ab quaerat?
                         Neque, aspernatur consectetur.</p>
                 </div>
             </div>
             <div class="row align-items-start justify-content-start py-3">
+                <div class="col-2">
+                    <img src="/assets/img/imagen_color.png"
+                        class="rounded mx-auto d-block border border-2 border-warning" alt="Logo">
+                </div>
                 <div class="col-4">
                     <h4 class="px-2 pt-4 fs-5">Lorem ipsum dolor sit</h4>
                     <p class="text-warning fw-bold text-center">2012-2015</p>
                 </div>
-                <div class="col-8">
+                <div class="col-6">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt quis veniam optio obcaecati?
                         Autem, esse consequatur perferendis iste fugiat reiciendis quo natus quidem, vel ab quaerat?
                         Neque, aspernatur consectetur.</p>
                 </div>
             </div>
             <div class="row align-items-start justify-content-start py-3">
+                <div class="col-2"><img src="/assets/img/imagen_color.png"
+                        class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
                 <div class="col-4">
                     <h4 class="px-2 pt-4 fs-5">Lorem ipsum dolor sit</h4>
                     <p class="text-warning fw-bold text-center">2015-2020</p>
                 </div>
-                <div class="col-8">
+                <div class="col-6">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt quis veniam optio obcaecati?
                         Autem, esse consequatur perferendis iste fugiat reiciendis quo natus quidem, vel ab quaerat?
                         Neque, aspernatur consectetur.</p>
@@ -240,52 +266,74 @@
     </section>
     <!-------seccion educación------->
     <section id="educacion" class="educacion">
-        <div class="container text-white mask py-3 my-5 shadow rounded-2" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="container text-white mask py-3 my-5 shadow rounded-2 bg-gradient"
+            style="background-color: rgba(0, 0, 0, 0.8)">
             <div class="titulo pt-3 ps-3 pb-4 text-warning">
                 <h2 class="fw-bold border-bottom">Educación</h2>
             </div>
             <div class="row align-items-start justify-content-start">
+                <div class="col-2"><img src="/assets/img/tec3.png"
+                        class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
                 <div class="col-4">
                     <h4 class="px-2 pt-4 fs-5">Escuela Técnica Nº1 Prof. Rafael Marino</h4>
                     <p class="text-warning fw-bold text-center">2001-2007</p>
                 </div>
-                <div class="col-8">
+                <div class="col-6">
                     <p class="px-2 pt-4 fs-5">Titulo Técnico electomecánico con orientacion en bienes y servicios</p>
                 </div>
             </div>
-            <div class="row align-items-start justify-content-start">
+            <div class="row align-items-start justify-content-start my-3">
+                <div class="col-2"><img src="/assets/img/inicap.jpg"
+                        class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
                 <div class="col-4">
                     <h4 class="px-2 pt-4 fs-5">INI computacion</h4>
                     <p class="text-warning fw-bold text-center">2008-2009</p>
                 </div>
-                <div class="col-8">
+                <div class="col-6">
                     <p class="px-2 pt-4 fs-5">Curso de capacitación-Operador de PC</p>
                 </div>
             </div>
-            <div class="row align-items-start justify-content-start">
+            <div class="row align-items-start justify-content-start my-3">
+                <div class="col-2"><img src="/assets/img/ina-logo.jpg"
+                        class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
                 <div class="col-4">
                     <h4 class="px-2 pt-4 fs-5">Instituto Nicolas Avellaneda</h4>
                     <p class="text-warning fw-bold text-center">2010-2011</p>
                 </div>
-                <div class="col-8">
+                <div class="col-6">
                     <p class="px-2 pt-4 fs-5">Tecnicatura en informatica aplicada</p>
                 </div>
             </div>
-            <div class="row align-items-start justify-content-start">
+            <div class="row align-items-start justify-content-start my-3">
+                <div class="col-2"><img src="/assets/img/ifartesUnt.png"
+                        class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
+                <div class="col-4">
+                    <h4 class="px-2 pt-4 fs-5">Facultad de Artes (UNT)</h4>
+                    <p class="text-warning fw-bold text-center">2012-2015</p>
+                </div>
+                <div class="col-6">
+                    <p class="px-2 pt-4 fs-5">Tecnicatura Universitaria en Sonorización</p>
+                </div>
+            </div>
+            <div class="row align-items-start justify-content-start my-3">
+                <div class="col-2"><img src="/assets/img/logofreecodecamp.png"
+                        class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
                 <div class="col-4">
                     <h4 class="px-2 pt-4 fs-5">freeCodeCamp</h4>
                     <p class="text-warning fw-bold text-center">2020-2021</p>
                 </div>
-                <div class="col-8">
+                <div class="col-6">
                     <p class="px-2 pt-4 fs-5">Diseño web responsivo</p>
                 </div>
             </div>
-            <div class="row align-items-start justify-content-start">
+            <div class="row align-items-start justify-content-start my-3">
+                <div class="col-2"><img src="/assets/img/APLogo-20-22.png"
+                        class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
                 <div class="col-4">
                     <h4 class="px-2 pt-4 fs-5">Argentina Programa</h4>
                     <p class="text-warning fw-bold text-center">2021-2022</p>
                 </div>
-                <div class="col-8">
+                <div class="col-6">
                     <p class="px-2 pt-4 fs-5">Programador web fullstack</p>
                 </div>
             </div>
@@ -293,7 +341,7 @@
     </section>
     <!------seccion skills------->
     <section id="skills" class="skills">
-        <div class="container text-white mask py-4 my-5 shadow rounded-2" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="container text-white mask py-4 my-5 shadow rounded-2 bg-gradient" style="background-color: rgba(0, 0, 0, 0.7)">
             <div class="titulo pt-3 ps-3 pb-4 text-warning">
                 <h2 class="fw-bold border-bottom">Skills</h2>
             </div>
@@ -303,79 +351,79 @@
                         <h4 class="shadow-sm text-warning">Frontend</h4>
                     </div>
                     <div class="m-2 fw-bold">HTML</div>
-                    <div class="progress ms-5">
-                        <div class="progress-bar  progress-bar-striped bg-warning" role="progressbar"
-                            aria-label="Example with label" style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100">60%</div>
-                    </div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar progress-bar-striped bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 70%;"
+                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                        </div>
 
-                    <div class="m-2 pt-2 fw-bold">CSS</div>
-                    <div class="progress ms-5">
-                        <div class="progress-bar progress-bar-striped" role="progressbar"
-                            aria-label="Example with label" style="width: 45%;" aria-valuenow="45" aria-valuemin="0"
-                            aria-valuemax="100">45%</div>
-                    </div>
+                        <div class="m-2 pt-2 fw-bold">CSS</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 55%;"
+                                aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div>
+                        </div>
 
-                    <div class="m-2 pt-2 fw-bold">JavaScript</div>
-                    <div class="progress ms-5">
-                        <div class="progress-bar progress-bar-striped" role="progressbar"
-                            aria-label="Example with label" style="width: 40%;" aria-valuenow="40" aria-valuemin="0"
-                            aria-valuemax="100">40%</div>
-                    </div>
+                        <div class="m-2 pt-2 fw-bold">JavaScript</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 40%;"
+                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                        </div>
 
-                    <div class="m-2 pt-2 fw-bold">Angular</div>
-                    <div class="progress ms-5">
-                        <div class="progress-bar progress-bar-striped" role="progressbar"
-                            aria-label="Example with label" style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100">60%</div>
-                    </div>
+                        <div class="m-2 pt-2 fw-bold">Angular</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 45%;"
+                                aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+                        </div>
 
-                    <div class="m-2 pt-2 fw-bold">Bootstrap</div>
-                    <div class="progress ms-5">
-                        <div class="progress-bar progress-bar-striped" role="progressbar"
-                            aria-label="Example with label" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-                            aria-valuemax="100">50%</div>
-                    </div>
+                        <div class="m-2 pt-2 fw-bold">Bootstrap</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 60%;"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                        </div>
                 </div>
 
                 <div class="col-6 justify-content-center">
                     <div class="text-center">
                         <h4 class="shadow-sm text-warning">Backend</h4>
                     </div>
-                    <div class="m-2 fw-bold">HTML</div>
-                    <div class="progress ms-5">
-                        <div class="progress-bar  progress-bar-striped bg-warning" role="progressbar"
-                            aria-label="Example with label" style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100">60%</div>
-                    </div>
+                    <div class="m-2 fw-bold">Java</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 60%;"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                        </div>
 
-                    <div class="m-2 pt-2 fw-bold">CSS</div>
-                    <div class="progress ms-5">
-                        <div class="progress-bar progress-bar-striped" role="progressbar"
-                            aria-label="Example with label" style="width: 45%;" aria-valuenow="45" aria-valuemin="0"
-                            aria-valuemax="100">45%</div>
-                    </div>
+                        <div class="m-2 pt-2 fw-bold">Node JS</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 45%;"
+                                aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+                        </div>
 
-                    <div class="m-2 pt-2 fw-bold">JavaScript</div>
-                    <div class="progress ms-5">
-                        <div class="progress-bar progress-bar-striped" role="progressbar"
-                            aria-label="Example with label" style="width: 40%;" aria-valuenow="40" aria-valuemin="0"
-                            aria-valuemax="100">40%</div>
-                    </div>
+                        <div class="m-2 pt-2 fw-bold">MySQL</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 40%;"
+                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                        </div>
 
-                    <div class="m-2 pt-2 fw-bold">Angular</div>
-                    <div class="progress ms-5">
-                        <div class="progress-bar progress-bar-striped" role="progressbar"
-                            aria-label="Example with label" style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100">60%</div>
-                    </div>
+                        <div class="m-2 pt-2 fw-bold">Angular</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 60%;"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                        </div>
 
-                    <div class="m-2 pt-2 fw-bold">Bootstrap</div>
-                    <div class="progress ms-5">
-                        <div class="progress-bar progress-bar-striped" role="progressbar"
-                            aria-label="Example with label" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-                            aria-valuemax="100">50%</div>
-                    </div>
+                        <div class="m-2 pt-2 fw-bold">Bootstrap</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 50%;"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -383,7 +431,7 @@
 
     <!--  seccion practicas  -->
     <section id="practicas">
-        <div class="container mask py-4 my-5 shadow rounded-2" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="container mask py-4 my-5 shadow rounded-2 bg-gradient" style="background-color: rgba(0, 0, 0, 0.8)">
             <div class="titulo pt-3 ps-3 pb-4 text-warning">
                 <h2 class="fw-bold border-bottom">Prácticas</h2>
             </div>
@@ -395,7 +443,7 @@
                             <h5 class="card-title">Página Tributo</h5>
                             <p class="card-text">Práctica de freeCodeCamp desarrollando una pagina tributo utilizando
                                 HTML y CSS.</p>
-                            <a href="#" class="d-flex btn btn-warning justify-content-center fw-bold">Ver en CodePen</a>
+                            <a href="#" class="d-flex btn btn-warning justify-content-center fw-bold rounded-pill">Ver en CodePen</a>
                         </div>
                     </div>
                 </div>
@@ -407,7 +455,7 @@
                             <h5 class="card-title">Formulario</h5>
                             <p class="card-text">Práctica de freeCodeCamp elaborando un formulario web utilizando HTML y
                                 CSS.</p>
-                            <a href="#" class="d-flex btn btn-warning justify-content-center fw-bold">Ver en CodePen</a>
+                            <a href="#" class="d-flex btn btn-warning justify-content-center fw-bold rounded-pill">Ver en CodePen</a>
                         </div>
                     </div>
                 </div>
@@ -418,7 +466,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Landing page</h5>
                             <p class="card-text">Practica freeCodeCamp creando una Landing page con HTML y CSS.</p>
-                            <a href="#" class="d-flex btn btn-warning justify-content-center fw-bold">Ver en CodePen</a>
+                            <a href="#" class="d-flex btn btn-warning justify-content-center fw-bold rounded-pill">Ver en CodePen</a>
                         </div>
                     </div>
                 </div>
@@ -426,6 +474,14 @@
             </div>
         </div>
     </section>
+
+    <footer class="">
+        <div class="container-fluid bg-dark d-flex align-items-center justify-content-end" style="height: 5rem;">
+            <p class="text-light m-3">
+                &copy; 2022 Alvaro.Gabriel.Mamani
+            </p>
+        </div>
+    </footer>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"

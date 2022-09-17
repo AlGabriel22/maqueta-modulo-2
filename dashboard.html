@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header id="header" class="header-tops">
+        <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/pixlr-bg-result (1).png" alt="argentina programa logo" width="100" height="40">
+                </a>
+                <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-list text-white" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
+                    <ul class="nav-hov navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#acercaDe">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#experiencia">Experiencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#educacion">Educación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#practicas">Prácticas</a>
+                        </li>
+                    </ul>
+                    <!---redes sociales-->
+                    <div class="position-relative end-10">
+                        <a href="#" class="icon-style" target="_blank"><svg class="btn-dark" width="30" height="30"
+                                viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" stroke="white" stroke-width="2" />
+                                <path
+                                    d="M6.81378 34.2351C9.24842 38.3138 13.0942 41.4526 17.6775 42.9785C18.6782 43.1614 19.0428 42.5438 19.0428 42.0134C19.0428 41.7938 19.0391 41.4058 19.0342 40.8866C19.0285 40.2853 19.0211 39.5079 19.0158 38.6125C13.4527 39.8206 12.279 35.931 12.279 35.931C11.3692 33.6215 10.0579 33.0064 10.0579 33.0064C8.242 31.7651 10.1954 31.7897 10.1954 31.7897C12.2028 31.9321 13.2587 33.8511 13.2587 33.8511C15.0427 36.9071 17.9403 36.0243 19.0797 35.5135C19.2614 34.2207 19.777 33.3391 20.3492 32.8394C15.9083 32.3348 11.239 30.6184 11.239 22.9545C11.239 20.7715 12.0187 18.9863 13.298 17.5879C13.0918 17.082 12.4054 15.0488 13.4932 12.2949C13.4932 12.2949 15.1728 11.7571 18.9937 14.3453C20.5886 13.9021 22.3001 13.6799 24.0006 13.6725C25.6986 13.6799 27.4102 13.9021 29.0075 14.3453C32.8259 11.7571 34.5019 12.2949 34.5019 12.2949C35.5934 15.0488 34.907 17.082 34.7008 17.5879C35.9826 18.9863 36.7573 20.7715 36.7573 22.9545C36.7573 30.638 32.0807 32.3287 27.625 32.8235C28.3433 33.441 28.983 34.6615 28.983 36.5277C28.983 38.3153 28.972 39.8722 28.9647 40.9036C28.9611 41.4144 28.9584 41.7963 28.9584 42.0134C28.9584 42.5488 29.3182 43.1712 30.3335 42.976C33.9847 41.7573 37.1674 39.5154 39.5406 36.5904C35.8737 41.1109 30.2743 44 24 44C16.6946 44 10.3041 40.0832 6.81378 34.2351Z"
+                                    fill="white" />
+                            </svg></a>
+                        <a href="#" class="icon-style" target="_blank"><svg width="30" height="30" viewBox="0 0 48 48"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" stroke="white" stroke-width="2" />
+                                <path
+                                    d="M24 14.1622C27.2041 14.1622 27.5837 14.1744 28.849 14.2321C30.019 14.2855 30.6544 14.481 31.0773 14.6453C31.6374 14.863 32.0371 15.123 32.457 15.5429C32.877 15.9629 33.137 16.3626 33.3547 16.9227C33.519 17.3456 33.7145 17.981 33.7679 19.1509C33.8256 20.4163 33.8379 20.7958 33.8379 23.9999C33.8379 27.2041 33.8256 27.5836 33.7679 28.849C33.7145 30.019 33.519 30.6543 33.3547 31.0772C33.137 31.6373 32.877 32.0371 32.4571 32.457C32.0371 32.8769 31.6374 33.1369 31.0773 33.3546C30.6544 33.519 30.019 33.7144 28.849 33.7678C27.5839 33.8255 27.2044 33.8378 24 33.8378C20.7956 33.8378 20.4162 33.8255 19.151 33.7678C17.981 33.7144 17.3456 33.519 16.9228 33.3546C16.3626 33.1369 15.9629 32.8769 15.543 32.457C15.1231 32.0371 14.863 31.6373 14.6453 31.0772C14.481 30.6543 14.2855 30.019 14.2321 28.849C14.1744 27.5836 14.1622 27.2041 14.1622 23.9999C14.1622 20.7958 14.1744 20.4163 14.2321 19.1509C14.2855 17.981 14.481 17.3456 14.6453 16.9227C14.863 16.3626 15.123 15.9629 15.543 15.543C15.9629 15.123 16.3626 14.863 16.9228 14.6453C17.3456 14.481 17.981 14.2855 19.151 14.2321C20.4163 14.1744 20.7959 14.1622 24 14.1622ZM24 12C20.741 12 20.3324 12.0138 19.0524 12.0722C17.7752 12.1305 16.9028 12.3333 16.1396 12.63C15.3505 12.9366 14.6812 13.3469 14.0141 14.0141C13.347 14.6812 12.9366 15.3504 12.63 16.1395C12.3334 16.9028 12.1305 17.7751 12.0722 19.0524C12.0138 20.3323 12 20.741 12 23.9999C12 27.259 12.0138 27.6676 12.0722 28.9475C12.1305 30.2248 12.3334 31.0971 12.63 31.8604C12.9366 32.6495 13.347 33.3187 14.0141 33.9859C14.6812 34.653 15.3505 35.0633 16.1396 35.3699C16.9028 35.6666 17.7752 35.8694 19.0524 35.9277C20.3324 35.9861 20.741 35.9999 24 35.9999C27.259 35.9999 27.6677 35.9861 28.9476 35.9277C30.2249 35.8694 31.0972 35.6666 31.8605 35.3699C32.6496 35.0633 33.3188 34.653 33.986 33.9859C34.6531 33.3187 35.0634 32.6495 35.3701 31.8604C35.6667 31.0971 35.8695 30.2248 35.9278 28.9475C35.9862 27.6676 36 27.259 36 23.9999C36 20.741 35.9862 20.3323 35.9278 19.0524C35.8695 17.7751 35.6667 16.9028 35.3701 16.1395C35.0634 15.3504 34.6531 14.6812 33.986 14.0141C33.3188 13.3469 32.6496 12.9366 31.8605 12.63C31.0972 12.3333 30.2249 12.1305 28.9476 12.0722C27.6677 12.0138 27.259 12 24 12Z"
+                                    fill="white" />
+                                <path
+                                    d="M24.0056 17.8434C20.6023 17.8434 17.8434 20.6023 17.8434 24.0055C17.8434 27.4088 20.6023 30.1677 24.0056 30.1677C27.4089 30.1677 30.1677 27.4088 30.1677 24.0055C30.1677 20.6023 27.4089 17.8434 24.0056 17.8434ZM24.0056 28.0055C21.7964 28.0055 20.0056 26.2147 20.0056 24.0055C20.0056 21.7964 21.7964 20.0056 24.0056 20.0056C26.2147 20.0056 28.0056 21.7964 28.0056 24.0055C28.0056 26.2147 26.2147 28.0055 24.0056 28.0055Z"
+                                    fill="white" />
+                                <path
+                                    d="M31.8508 17.5962C31.8508 18.3914 31.2061 19.0361 30.4108 19.0361C29.6155 19.0361 28.9708 18.3914 28.9708 17.5962C28.9708 16.8009 29.6155 16.1561 30.4108 16.1561C31.2061 16.1561 31.8508 16.8009 31.8508 17.5962Z"
+                                    fill="white" />
+                            </svg></a>
+                        <a href="#" class="icon-style" target="_blank"><svg width="30" height="30" viewBox="0 0 48 48"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" stroke="#FFFCFC" stroke-width="2" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.1793 17.0841C19.1793 18.2203 18.3495 19.1398 17.0518 19.1398C15.8047 19.1398 14.9749 18.2203 15.0006 17.0841C14.9749 15.8927 15.8047 15 17.0767 15C18.3495 15 19.1545 15.8927 19.1793 17.0841ZM15.1049 33.9982V20.7638H19.0501V33.9974H15.1049V33.9982Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21.8451 24.5188C21.8451 22.8681 21.7925 21.4608 21.7398 20.297H25.1981L25.3819 22.1101H25.4605C25.9845 21.2709 27.2941 20 29.416 20C32.0352 20 34 21.7863 34 25.6818V33.5314H30.0186V26.1972C30.0186 24.4912 29.4427 23.3283 28.0019 23.3283C26.9013 23.3283 26.2469 24.1131 25.9853 24.8702C25.88 25.1413 25.8282 25.5195 25.8282 25.8993V33.5314H21.8467V24.5188H21.8451Z"
+                                    fill="white" />
+                            </svg></a>
+                    </div>
+                    <!---Logout button -->
+
+                    <a href="/index.html"><button type="button"
+                            class="btn btn-outline-light rounded-pill ms-3 my-3">Logout</button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!--banner-->
+        <div class="bg-image">
+            <div class="border-5 border-bottom border-white position-relative">
+                <img src="assets/img/mohammad-rahmani-Y5yxdx2a4PI-2.1.jpg" class="d-block w-100 h-auto img-fluid"
+                    alt="banner by mohammad-rahmani">
+                <!--boton de edicion banner-->
+                <div class="d-flex justify-content-end" id="btn-edit">
+                    <button
+                        class="btn btn-warning me-md-2 rounded-circle position-absolute top-50 bg-transparent border border-2 border-warning bg-gradient"
+                        type="
+                            button" data-bs-toggle="modal" data-bs-target="#edicionBanner"><span
+                            class="material-symbols-outlined py-1 text-warning" style="font-size: 1rem;">
+                            edit
+                        </span>
+                    </button>
+                </div>
+
+                <div class="perfil-img text-center col-sm-2">
+                    <img src="assets/img/imgprfl-200x200.jpg" id="imagen"
+                        class="rounded-circle border border-5 border-white position-absolute translate-middle img-fluid"
+                        alt="Alvaro.Gabriel">
+                    <!-- boton de edicion foto/perfil-->
+                    <div class="justify-content-start float-start ms-2" id="btn-edit">
+                        <button
+                            class="btn btn-warning me-md-2 rounded-circle position-absolute bg-transparent border border-2 border-warning bg-gradient"
+                            type="button" data-bs-toggle="modal" data-bs-target="#edicionImgPerfil"><span
+                                class="material-symbols-outlined py-1 text-warning" style="font-size: 1rem;">
+                                edit
+                            </span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid d-flex bg-dark bg-gradient shadow">
+            <div class="row d-flex justify-content-center ps-5 ms-5">
+                <div class="d-flex col-6 col-sm-12 justify-content-center text-light ms-1 mb-0 pb-0 pt-2 fs-4">
+                    <h1 class="mb-0 d-flex justify-content-center fw-semibold fs-3" id="nombre">Alvaro Gabriel Mamani
+                    </h1>
+                </div>
+                <div class="d-flex justify-content-center text-warning mt-0 pb-2 pt-0 fs-5">
+                    <p id="perfil"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-code-slash mt-0 pt-0 mx-0" viewBox="0 0 20 20">
+                            <path
+                                d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
+                        </svg>Full Stack Developer Jr.</p>
+                </div>
+            </div>
+            <!--boton de edicion nombre-->
+            <div class="grid gap-2 justify-content-end my-3" id="btn-edit">
+                <button
+                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient mb-2"
+                    type="button" data-bs-toggle="modal" data-bs-target="#edicionNombre"><span
+                        class="material-symbols-outlined py-1 text-warning" style="font-size: 1rem;">
+                        edit
+                    </span></button>
+                <button
+                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient mb-2"
+                    type="button" data-bs-toggle="modal" data-bs-target="#borrarNombre"><span
+                        class="material-symbols-outlined py-1 text-warning" style="font-size: 1rem;">
+                        Close
+                    </span></button>
+            </div>
+        </div>
+
+        <!-- Modal banner-->
+        <div class="modal fade" id="edicionBanner" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-light" id="staticBackdropLabel">Editar banner</h5>
+                        <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <label for="formFile" class="form-label"></label>
+                        <input class="form-control bg-dark text-light" type="file" id="formFile">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-warning">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Imagen de perfil-->
+        <div class="modal fade" id="edicionImgPerfil" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-light" id="staticBackdropLabel">Editar Imagen de perfil</h5>
+                        <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <label for="formFile" class="form-label"></label>
+                        <input class="form-control bg-dark text-light" type="file" id="formFile">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-warning">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Nombre-->
+        <div class="modal fade" id="edicionNombre" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-light" id="staticBackdropLabel">Editar Nombre</h5>
+                        <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input class="form-control text-light bg-dark mt-3" type="text" placeholder="Nombre"
+                            aria-label="default input example">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input class="form-control text-light bg-dark" type="text" placeholder="titulo"
+                            aria-label="default input example">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-warning">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal borrar nombre-->
+        <div class="modal fade" id="borrarNombre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-warning bg-dark">
+                        SE ELIMINARA ESTA SECCION!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-warning">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="acercaDe" class="my-5">
+            <div class="container mask py-4 my-5 shadow rounded-2 text-white bg-gradient"
+                style="background-color: rgba(0, 0, 0, 0.8)">
+                <div class="row">
+                    <div class="col">
+                        <div class="titulo pt-3 ps-3 pb-1 text-warning">
+                            <h2 class="fw-bold border-bottom">Acerca de</h2>
+                        </div>
+                        <div class="col justify-content-center mx-3 py-1">
+                            <!--- boton de edicion acerca de--->
+                            <div class="d-grid gap-2 d-flex justify-content-end" id="btn-edit">
+                                <button
+                                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#edicionAcercaDe"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        edit
+                                    </span></button>
+                                <button
+                                    class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#borrarAcercaDe"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        close
+                                    </span></button>
+                            </div>
+                            <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt quis
+                                veniam optio
+                                obcaecati?
+                                Autem, esse consequatur perferendis iste fugiat reiciendis quo natus quidem, vel ab
+                                quaerat?
+                                Neque, aspernatur consectetur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal acerca de-->
+        <div class="modal fade" id="edicionAcercaDe" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-light" id="staticBackdropLabel">Acerca de mi</h5>
+                        <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text">Agregar información</span>
+                        <textarea class="form-control bg-dark text-light" aria-label="With textarea"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-warning">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal borrar Acerca de-->
+        <div class="modal fade" id="borrarAcercaDe" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-warning bg-dark">
+                        SE ELIMINARA ESTA SECCION!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-warning">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="experiencia" class="my-5">
+            <div class="container mask py-4 my-5 shadow rounded-2 text-white bg-gradient"
+                style="background-color: rgba(0, 0, 0, 0.6)">
+                <div class="row">
+                    <div class="col">
+                        <div class="titulo pt-3 ps-3 pb-1 text-warning">
+                            <!--boton de Nuevo elemento-->
+                            <div class="d-grid gap-2 d-flex justify-content-end">
+                                <button
+                                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#agregarExperiencia"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-plus-lg text-light" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                                    </svg></button>
+                            </div>
+                            <h2 class="fw-bold border-bottom">Experiencia</h2>
+                        </div>
+                        <div class="row align-items-start justify-content-start py-3">
+                            <!--boton de edicion experiencia-->
+                            <div class="d-grid gap-2 d-flex justify-content-end">
+                                <button
+                                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#edicionExperiencia"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        edit
+                                    </span></button>
+                                <button
+                                    class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#borrarExperiencia"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        close
+                                    </span></button>
+                            </div>
+                            <div class="col-2 col-sm"><img src="/assets/img/imagen_color.png"
+                                    class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
+
+                            <div class="col-4">
+                                <h4 class="px-2 pt-4 fs-5">Lorem ipsum dolor sit</h4>
+                                <p class="text-warning fw-bold text-center">2015-2020</p>
+                            </div>
+                            <div class="col-6 mt-4">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt quis veniam optio
+                                    obcaecati?
+                                    Autem, esse consequatur perferendis iste fugiat reiciendis quo natus quidem, vel ab
+                                    quaerat?
+                                    Neque, aspernatur consectetur.</p>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-start justify-content-start py-3">
+                            <!--boton de edicion experiencia-->
+                            <div class="d-grid gap-2 d-flex justify-content-end">
+                                <button
+                                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#edicionExperiencia1"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        edit
+                                    </span></button>
+                                <button
+                                    class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#borrarExperiencia1"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        close
+                                    </span></button>
+                            </div>
+                            <div class="col-2"><img src="/assets/img/imagen_color.png"
+                                    class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
+
+                            <div class="col-4">
+                                <h4 class="px-2 pt-4 fs-5">Lorem ipsum dolor sit</h4>
+                                <p class="text-warning fw-bold text-center">2015-2020</p>
+                            </div>
+                            <div class="col-6 mt-4">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt quis veniam optio
+                                    obcaecati?
+                                    Autem, esse consequatur perferendis iste fugiat reiciendis quo natus quidem, vel ab
+                                    quaerat?
+                                    Neque, aspernatur consectetur.</p>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-start justify-content-start py-3">
+                            <!--boton de edicion experiencia-->
+                            <div class="d-grid gap-2 d-flex justify-content-end">
+                                <button
+                                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#edicionExperiencia2"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        edit
+                                    </span></button>
+                                <button
+                                    class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#borrarExperiencia2"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        close
+                                    </span></button>
+                            </div>
+                            <div class="col-2"><img src="/assets/img/imagen_color.png"
+                                    class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
+
+                            <div class="col-4">
+                                <h4 class="px-2 pt-4 fs-5">Lorem ipsum dolor sit</h4>
+                                <p class="text-warning fw-bold text-center">2015-2020</p>
+                            </div>
+                            <div class="col-6 mt-4">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt quis veniam optio
+                                    obcaecati?
+                                    Autem, esse consequatur perferendis iste fugiat reiciendis quo natus quidem, vel ab
+                                    quaerat?
+                                    Neque, aspernatur consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal experiencia-->
+            <div class="modal fade" id="edicionExperiencia" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Experiencia</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Nombre de la empresa</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light"
+                                placeholder="Nombre de la empresa">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Periodo</span>
+                            <input type="text" aria-label="Año" class="form-control bg-dark text-light"
+                                placeholder="1999-2001">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text">Descripción
+                            </span>
+                            <input type="text" aria-label="Descripcion" class="form-control bg-dark text-light"
+                                placeholder="descripción">
+                        </div>
+                        <div class="my-3">
+                            <label for="formFile" class="form-label text-light">Agrega un logo (opcional)</label>
+                            <input class="form-control bg-dark text-light" type="file" id="formFile">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar Experiencia-->
+            <div class="modal fade" id="borrarExperiencia" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                            <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-warning bg-dark">
+                            SE ELIMINARA ESTA SECCION!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal experiencia 1-->
+            <div class="modal fade" id="edicionExperiencia1" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Experiencia</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Nombre de la empresa</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light"
+                                placeholder="Nombre de la empresa">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Periodo</span>
+                            <input type="text" aria-label="Año" class="form-control bg-dark text-light"
+                                placeholder="1999-2001">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text">Descripción
+                            </span>
+                            <input type="text" aria-label="Descripcion" class="form-control bg-dark text-light"
+                                placeholder="descripción">
+                        </div>
+                        <div class="my-3">
+                            <label for="formFile" class="form-label text-light">Agrega un logo (opcional)</label>
+                            <input class="form-control bg-dark text-light" type="file" id="formFile">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar Experiencia-->
+            <div class="modal fade" id="borrarExperiencia1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                            <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-warning bg-dark">
+                            SE ELIMINARA ESTA SECCION!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal experiencia 2-->
+            <div class="modal fade" id="edicionExperiencia2" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Experiencia</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Nombre de la empresa</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light"
+                                placeholder="Nombre de la empresa">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Periodo</span>
+                            <input type="text" aria-label="Año" class="form-control bg-dark text-light"
+                                placeholder="1999-2001">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text">Descripción
+                            </span>
+                            <input type="text" aria-label="Descripcion" class="form-control bg-dark text-light"
+                                placeholder="descripción">
+                        </div>
+                        <div class="my-3">
+                            <label for="formFile" class="form-label text-light">Agrega un logo (opcional)</label>
+                            <input class="form-control bg-dark text-light" type="file" id="formFile">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar Experiencia2-->
+            <div class="modal fade" id="borrarExperiencia2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                            <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-warning bg-dark">
+                            SE ELIMINARA ESTA SECCION!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Nueva experiencia-->
+            <div class="modal fade" id="agregarExperiencia" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Agregar Nuevo Campo</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Nombre de la empresa</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light"
+                                placeholder="Nombre de la empresa">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Periodo</span>
+                            <input type="text" aria-label="Año" class="form-control bg-dark text-light"
+                                placeholder="1999-2001">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text">Descripción
+                            </span>
+                            <input type="text" aria-label="Descripcion" class="form-control bg-dark text-light"
+                                placeholder="descripción">
+                        </div>
+                        <div class="my-3">
+                            <label for="formFile" class="form-label text-light">Agrega un logo (opcional)</label>
+                            <input class="form-control bg-dark text-light" type="file" id="formFile">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="educacion" class="my-5">
+            <div class="container mask py-4 my-5 shadow rounded-2 text-white bg-gradient"
+                style="background-color: rgba(0, 0, 0, 0.7)">
+                <div class="row">
+                    <div class="col">
+                        <div class="titulo pt-3 ps-3 pb-1 text-warning">
+                            <!--boton de Nuevo elemento-->
+                            <div class="d-grid gap-2 d-flex justify-content-end">
+                                <button
+                                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#agregarEducacion"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-plus-lg text-light" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                                    </svg></button>
+                            </div>
+                            <h2 class="fw-bold border-bottom">Educación</h2>
+                        </div>
+                        <div class="row align-items-start justify-content-start py-3">
+                            <!--boton de edicion educacion-->
+                            <div class="d-grid gap-2 d-flex justify-content-end">
+                                <button
+                                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#edicionEducacion"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        edit
+                                    </span></button>
+                                <button
+                                    class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#borrarEducacion"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        close
+                                    </span></button>
+                            </div>
+                            <div class="col-2"><img src="/assets/img/imagen_color.png"
+                                    class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
+
+                            <div class="col-4">
+                                <h4 class="px-2 pt-4 fs-5">Lorem ipsum dolor sit</h4>
+                                <p class="text-warning fw-bold text-center">2015-2020</p>
+                            </div>
+                            <div class="col-6 mt-4">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt quis veniam optio
+                                    obcaecati?
+                                    Autem, esse consequatur perferendis iste fugiat reiciendis quo natus quidem, vel ab
+                                    quaerat?
+                                    Neque, aspernatur consectetur.</p>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-start justify-content-start py-3">
+                            <!--boton de edicion educacion-->
+                            <div class="d-grid gap-2 d-flex justify-content-end">
+                                <button
+                                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#edicionEducacion1"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        edit
+                                    </span></button>
+                                <button
+                                    class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#borrarEducacion1"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        close
+                                    </span></button>
+                            </div>
+                            <div class="col-2"><img src="/assets/img/imagen_color.png"
+                                    class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
+
+                            <div class="col-4">
+                                <h4 class="px-2 pt-4 fs-5">Lorem ipsum dolor sit</h4>
+                                <p class="text-warning fw-bold text-center">2015-2020</p>
+                            </div>
+                            <div class="col-6 mt-4">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt quis veniam optio
+                                    obcaecati?
+                                    Autem, esse consequatur perferendis iste fugiat reiciendis quo natus quidem, vel ab
+                                    quaerat?
+                                    Neque, aspernatur consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-start justify-content-start py-3">
+                            <!--boton de edicion-->
+                            <div class="d-grid gap-2 d-flex justify-content-end">
+                                <button
+                                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#edicionEducacion2"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        edit
+                                    </span></button>
+                                <button
+                                    class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#borrarEducacion2"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        close
+                                    </span></button>
+                            </div>
+                            <div class="col-2"><img src="/assets/img/imagen_color.png"
+                                    class="rounded mx-auto d-block border border-2 border-warning" alt="Logo"></div>
+
+                            <div class="col-4">
+                                <h4 class="px-2 pt-4 fs-5">Lorem ipsum dolor sit</h4>
+                                <p class="text-warning fw-bold text-center">2015-2020</p>
+                            </div>
+                            <div class="col-6 mt-4">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt quis veniam optio
+                                    obcaecati?
+                                    Autem, esse consequatur perferendis iste fugiat reiciendis quo natus quidem, vel ab
+                                    quaerat?
+                                    Neque, aspernatur consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal educacion-->
+            <div class="modal fade" id="edicionEducacion" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Educación</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Institución</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light"
+                                placeholder="Institución">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Periodo</span>
+                            <input type="text" aria-label="Año" class="form-control bg-dark text-light"
+                                placeholder="1999-2001">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text">Titulo-certificación
+                            </span>
+                            <input type="text" aria-label="Titulo-Certificado" class="form-control bg-dark text-light"
+                                placeholder="Titulo">
+                        </div>
+                        <div class="my-3">
+                            <label for="formFile" class="form-label text-light">Agrega un logo (opcional)</label>
+                            <input class="form-control bg-dark text-light" type="file" id="formFile">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar Educacion-->
+            <div class="modal fade" id="borrarEducacion" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                            <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-warning bg-dark">
+                            SE ELIMINARA ESTA SECCION!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal educacion 1-->
+            <div class="modal fade" id="edicionEducacion1" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Educación</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Institución</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light"
+                                placeholder="Institución">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Periodo</span>
+                            <input type="text" aria-label="Año" class="form-control bg-dark text-light"
+                                placeholder="1999-2001">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text">Titulo-certificación
+                            </span>
+                            <input type="text" aria-label="Titulo-certificación" class="form-control bg-dark text-light"
+                                placeholder="titulo">
+                        </div>
+                        <div class="my-3">
+                            <label for="formFile" class="form-label text-light">Agrega un logo (opcional)</label>
+                            <input class="form-control bg-dark text-light" type="file" id="formFile">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar Educacion-->
+            <div class="modal fade" id="borrarEducacion1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                            <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-warning bg-dark">
+                            SE ELIMINARA ESTA SECCION!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal educacion 2-->
+            <div class="modal fade" id="edicionEducacion2" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Educación</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Institución</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light"
+                                placeholder="Institución">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Periodo</span>
+                            <input type="text" aria-label="Año" class="form-control bg-dark text-light"
+                                placeholder="1999-2001">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text">Titulo-certificación
+                            </span>
+                            <input type="text" aria-label="Titulo-certificación" class="form-control bg-dark text-light"
+                                placeholder="titulo">
+                        </div>
+                        <div class="my-3">
+                            <label for="formFile" class="form-label text-light">Agrega un logo (opcional)</label>
+                            <input class="form-control bg-dark text-light" type="file" id="formFile">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar Educacion-->
+            <div class="modal fade" id="borrarEducacion2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                            <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-warning bg-dark">
+                            SE ELIMINARA ESTA SECCION!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Nuevo elemento educacion-->
+            <div class="modal fade" id="agregarEducacion" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Agregar Nuevo Campo</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Institución</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light"
+                                placeholder="Institución">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Periodo</span>
+                            <input type="text" aria-label="Año" class="form-control bg-dark text-light"
+                                placeholder="1999-2001">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text">Titulo-certificación
+                            </span>
+                            <input type="text" aria-label="Titulo-Certificado" class="form-control bg-dark text-light"
+                                placeholder="Titulo">
+                        </div>
+                        <div class="my-3">
+                            <label for="formFile" class="form-label text-light">Agrega un logo (opcional)</label>
+                            <input class="form-control bg-dark text-light" type="file" id="formFile">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container text-white mask py-4 my-5 shadow rounded-2 bg-gradient"
+                style="background-color: rgba(0, 0, 0, 0.6)">
+                <div class="titulo pt-3 ps-3 pb-4 text-warning">
+                    <!--boton de Nuevo elemento-->
+                    <div class="d-grid gap-2 d-flex justify-content-end">
+                        <button
+                            class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                            type="button" data-bs-toggle="modal" data-bs-target="#agregarSkill"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus-lg text-light" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                            </svg></button>
+                    </div>
+                    <h2 class="fw-bold border-bottom">Skills</h2>
+                </div>
+                <div class="row">
+                    <div class="col-6 justify-content-start shadow-sm">
+                        <div class="text-center">
+                            <!--boton de edicion skills-->
+                            <div class="d-grid gap-2 d-flex justify-content-end">
+                                <button
+                                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#edicionSkillsFront"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        edit
+                                    </span></button>
+                                <button
+                                    class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#borrarFrontSkills"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        close
+                                    </span></button>
+                            </div>
+                            <h4 class="shadow-sm text-warning">Frontend</h4>
+                        </div>
+                        <div class="m-2 fw-bold">HTML</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar progress-bar-striped bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 70%;"
+                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                        </div>
+
+                        <div class="m-2 pt-2 fw-bold">CSS</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 55%;"
+                                aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div>
+                        </div>
+
+                        <div class="m-2 pt-2 fw-bold">JavaScript</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 40%;"
+                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                        </div>
+
+                        <div class="m-2 pt-2 fw-bold">Angular</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 45%;"
+                                aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+                        </div>
+
+                        <div class="m-2 pt-2 fw-bold">Bootstrap</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 60%;"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 justify-content-center">
+                        <div class="text-center">
+
+                            <!--boton de edicion back-end-->
+                            <div class="d-grid gap-2 d-flex justify-content-end">
+                                <button
+                                    class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#edicionSkillsBack"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        edit
+                                    </span></button>
+                                <button
+                                    class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#borrarBackSkills"><span
+                                        class="material-symbols-outlined text-warning py-1" style="font-size: 1rem;">
+                                        close
+                                    </span></button>
+                            </div>
+
+                            <h4 class="shadow-sm text-warning">Backend</h4>
+                        </div>
+                        <div class="m-2 fw-bold">Java</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 60%;"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                        </div>
+
+                        <div class="m-2 pt-2 fw-bold">Node JS</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 45%;"
+                                aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+                        </div>
+
+                        <div class="m-2 pt-2 fw-bold">MySQL</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 40%;"
+                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                        </div>
+
+                        <div class="m-2 pt-2 fw-bold">Angular</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 60%;"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                        </div>
+
+                        <div class="m-2 pt-2 fw-bold">Bootstrap</div>
+                        <div class="progress ms-5">
+                            <div class="progress-bar bg-success bg-gradient border border-1 border-warning"
+                                role="progressbar" aria-label="Example with label" style="width: 50%;"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal skills front-->
+            <div class="modal fade" id="edicionSkillsFront" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Skills</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Herramienta</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Progreso</span>
+                            <input type="text" aria-label="Progreso" class="form-control bg-dark text-light"
+                                placeholder="Porcentaje estimado (%)">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar Skills-->
+            <div class="modal fade" id="borrarFrontSkills" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                            <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-warning bg-dark">
+                            SE ELIMINARA ESTA SECCION!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal skills back-->
+            <div class="modal fade" id="edicionSkillsBack" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Skills</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Herramienta</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Progreso</span>
+                            <input type="text" aria-label="Progreso" class="form-control bg-dark text-light"
+                                placeholder="Porcentaje estimado (%)">
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar back-end skills-->
+            <div class="modal fade" id="borrarBackSkills" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                            <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-warning bg-dark">
+                            SE ELIMINARA ESTA SECCION!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Nueva skill-->
+            <div class="modal fade" id="agregarSkill" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Agregar Nuevo</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Herramienta</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Progreso</span>
+                            <input type="text" aria-label="Progreso" class="form-control bg-dark text-light"
+                                placeholder="Porcentaje estimado (%)">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="practicas">
+            <div class="container mask py-4 my-5 shadow rounded-2 bg-gradient"
+                style="background-color: rgba(0, 0, 0, 0.7)">
+                <div class="titulo pt-3 ps-3 pb-4 text-warning">
+                    <!--boton de Nuevo elemento-->
+                    <div class="d-grid gap-2 d-flex justify-content-end">
+                        <button
+                            class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                            type="button" data-bs-toggle="modal" data-bs-target="#agregarPractica"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus-lg text-light" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                            </svg></button>
+                    </div>
+                    <h2 class="fw-bold border-bottom">Prácticas</h2>
+                </div>
+                <div class="row">
+                    <div class="col d-flex justify-content-center mx-3 py-4">
+                        <div class="card shadow bg-dark text-light" style="width: 18rem;">
+                            <img src="/assets/img/_codepen.io3.png" class="card-img-top h-50" alt="...">
+                            <div class="card-body">
+                                <!--boton de edicion Practicas-->
+                                <div class="gap-1 d-flex justify-content-end mb-2">
+                                    <button
+                                        class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                        type="button" data-bs-toggle="modal" data-bs-target="#edicionPractica"><span
+                                            class="material-symbols-outlined text-warning py-1"
+                                            style="font-size: 1rem;">
+                                            edit
+                                        </span></button>
+                                    <button
+                                        class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                        type="button" data-bs-toggle="modal" data-bs-target="#borrarPractica"><span
+                                            class="material-symbols-outlined text-warning py-1"
+                                            style="font-size: 1rem;">
+                                            close
+                                        </span></button>
+                                </div>
+                                <h5 class="card-title">Página Tributo</h5>
+                                <p class="card-text">Práctica de freeCodeCamp desarrollando una pagina tributo
+                                    utilizando
+                                    HTML y CSS.</p>
+                                <a href="#"
+                                    class="d-flex btn btn-warning rounded-pill justify-content-center fw-bold">Ver en
+                                    CodePen</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex justify-content-center mx-3 py-4">
+                        <div class="card shadow bg-dark text-light" style="width: 18rem;">
+                            <img src="/assets/img/codepen.io2.png" class="card-img-top h-50" alt="...">
+
+                            <div class="card-body">
+
+                                <!--boton de edicion Practicas-->
+                                <div class="gap-2 d-flex justify-content-end mb-2">
+                                    <button
+                                        class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                        type="button" data-bs-toggle="modal" data-bs-target="#edicionPractica1"><span
+                                            class="material-symbols-outlined text-warning py-1"
+                                            style="font-size: 1rem;">
+                                            edit
+                                        </span></button>
+                                    <button
+                                        class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                        type="button" data-bs-toggle="modal" data-bs-target="#borrarPractica1"><span
+                                            class="material-symbols-outlined text-warning py-1"
+                                            style="font-size: 1rem;">
+                                            close
+                                        </span></button>
+                                </div>
+                                <h5 class="card-title">Formulario</h5>
+                                <p class="card-text">Práctica de freeCodeCamp elaborando un formulario web utilizando
+                                    HTML y
+                                    CSS.</p>
+                                <a href="#"
+                                    class="d-flex btn btn-warning rounded-pill justify-content-center fw-bold">Ver en
+                                    CodePen</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex justify-content-center mx-3 py-4">
+                        <div class="card shadow bg-dark text-light" style="width: 18rem;">
+                            <img src="/assets/img/codepen.io.png" class="card-img-top h-50" alt="...">
+                            <div class="card-body">
+                                <!--boton de edicion Practicas-->
+                                <div class="gap-1 d-flex justify-content-end mb-2">
+                                    <button
+                                        class="btn btn-warning me-md-2 rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                        type="button" data-bs-toggle="modal" data-bs-target="#edicionPractica2"><span
+                                            class="material-symbols-outlined text-warning py-1"
+                                            style="font-size: 1rem;">
+                                            edit
+                                        </span></button>
+                                    <button
+                                        class="btn btn-warning rounded-circle bg-transparent border border-2 border-warning bg-gradient"
+                                        type="button" data-bs-toggle="modal" data-bs-target="#borrarPractica2"><span
+                                            class="material-symbols-outlined text-warning py-1"
+                                            style="font-size: 1rem;">
+                                            close
+                                        </span></button>
+                                </div>
+                                <h5 class="card-title">Landing page</h5>
+                                <p class="card-text">Practica freeCodeCamp creando una Landing page con HTML y CSS.</p>
+                                <a href="#"
+                                    class="d-flex btn btn-warning rounded-pill justify-content-center fw-bold">Ver en
+                                    CodePen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Agregar nuevo-->
+            <div class="modal fade" id="agregarPractica" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Agregar Nuevo</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Nombre</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Descripción</span>
+                            <input type="text" aria-label="Progreso" class="form-control bg-dark text-light">
+                        </div>
+
+                        <div class="my-1">
+                            <label for="formFile" class="form-label text-light bg-dark">Agrega una imagen</label>
+                            <input class="form-control text-light bg-dark" type="file" id="formFile">
+                        </div>
+
+                        <label for="basic-url" class="form-label my-1 text-light">Agrega una URL</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                            <input type="text" class="form-control text-light bg-dark" id="basic-url"
+                                aria-describedby="basic-addon3">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal edicion practicas-->
+            <div class="modal fade" id="edicionPractica" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Editar Campo</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Nombre</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Descripción</span>
+                            <input type="text" aria-label="Progreso" class="form-control bg-dark text-light">
+                        </div>
+
+                        <div class="my-1">
+                            <label for="formFile" class="form-label text-light bg-dark">Agrega una imagen</label>
+                            <input class="form-control text-light bg-dark" type="file" id="formFile">
+                        </div>
+
+                        <label for="basic-url" class="form-label my-1 text-light">Agrega una URL</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                            <input type="text" class="form-control text-light bg-dark" id="basic-url"
+                                aria-describedby="basic-addon3">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar campo1-->
+            <div class="modal fade" id="borrarPractica" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                            <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-warning bg-dark">
+                            SE ELIMINARA ESTA SECCION!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal edicion practicas-->
+            <div class="modal fade" id="edicionPractica1" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Editar Campo</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Nombre</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Descripción</span>
+                            <input type="text" aria-label="Progreso" class="form-control bg-dark text-light">
+                        </div>
+
+                        <div class="my-1">
+                            <label for="formFile" class="form-label text-light bg-dark">Agrega una imagen</label>
+                            <input class="form-control text-light bg-dark" type="file" id="formFile">
+                        </div>
+
+                        <label for="basic-url" class="form-label my-1 text-light">Agrega una URL</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                            <input type="text" class="form-control text-light bg-dark" id="basic-url"
+                                aria-describedby="basic-addon3">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar campo1-->
+            <div class="modal fade" id="borrarPractica1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                            <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-warning bg-dark">
+                            SE ELIMINARA ESTA SECCION!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal edicion practicas-->
+            <div class="modal fade" id="edicionPractica2" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="staticBackdropLabel">Editar Campo</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <!-- formulario -->
+                        <div class="input-group">
+                            <span class="input-group-text">Nombre</span>
+                            <input type="text" aria-label="Nombre" class="form-control bg-dark text-light">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Descripción</span>
+                            <input type="text" aria-label="Progreso" class="form-control bg-dark text-light">
+                        </div>
+
+                        <div class="my-1">
+                            <label for="formFile" class="form-label text-light bg-dark">Agrega una imagen</label>
+                            <input class="form-control text-light bg-dark" type="file" id="formFile">
+                        </div>
+
+                        <label for="basic-url" class="form-label my-1 text-light">Agrega una URL</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                            <input type="text" class="form-control text-light bg-dark" id="basic-url"
+                                aria-describedby="basic-addon3">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-warning">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar campo1-->
+            <div class="modal fade" id="borrarPractica2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-light" id="exampleModalLabel">Borrar Campo</h5>
+                            <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-warning bg-dark">
+                            SE ELIMINARA ESTA SECCION!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="">
+        <div class="container-fluid bg-dark d-flex align-items-center justify-content-end" style="height: 5rem;">
+            <p class="text-light m-3">
+                &copy; 2022 Alvaro.Gabriel.Mamani
+            </p>
+        </div>
+    </footer>
+    <!--javascript-cdm-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

@@ -7,6 +7,23 @@ body {
     background-size: cover;
 }
 
+::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        to bottom,
+        #ffc107,
+        #f37b0af6
+    );
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background: #474747;
+}
 
 /* estilos de iconos sociales*/
 
@@ -35,18 +52,19 @@ svg:hover {
     color:white;
 }
 
-/*#imagen {
+#imagen {
     position: absolute;
-    left: 10%;
+    left: 20%;
     top: 100%;
 }
-@media (max-width: 600px){
+
+@media (max-width: 720px){
     .perfil-img {
         position: absolute;
-        top: 25%;
-        left: 10%;
+        top: 100%;
+        left: 30%;
     }
-} */
+} 
 
 @media (max-width: 375px) {
     #imagen {
@@ -56,15 +74,16 @@ svg:hover {
         border: 1px solid #f4f4f4
     }
 }
-    /* 4 columnas para grandes dispositivos*/
-@media (max-width: 420px) {
+*/
+
+@media (max-width: 575px) {
         #imagen  {
             max-width: 30%;
             position: absolute;
             left: 20%;
     }
 }
-
+/*
 @media (max-width: 540px) {
     #imagen  {
         max-width: 25%;
@@ -72,26 +91,27 @@ svg:hover {
         left:13%
     }
 }
+*/
 
-@media (max-width: 768px) {
+@media (min-width: 1280px) {
     #imagen  {
         max-width: 40%;
         position: absolute;
-        left: 15%;
+        left: 10%;
     }
 }
 
 @media (max-width: 375px) {
     #nombre {
-        font-size: large;
+        font-size: 1.5rem;
     }
 
     #perfil {
-        font-size: small;
+        font-size: 1em;
         margin-bottom: 0;
     }
 }
-
+/*
 @media (max-width: 415px) {
     #nombre {
         font-size: large;
@@ -101,7 +121,7 @@ svg:hover {
         font-size: small;
         margin-bottom: 0;
     }
-}
+} 
 
 
 /*-----navbar----*/
@@ -126,3 +146,20 @@ svg:hover {
 .nav-hov a:hover::before {
     transform: scaleX(1);
 }
+
+/* logos de educacion y experiencia*/
+.rounded.mx-auto.d-block {
+    width: 5em;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+/*boton de edicion*/
+/*#btn-edit-perfil {
+    display: flex;
+    position: fixed;
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+}
+*/
